@@ -1,0 +1,581 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-30 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer_name",
+  "mobile_no",
+  "email_id",
+  "column_break_1",
+  "stage",
+  "stage_since",
+  "company",
+  "place",
+  "section_lead",
+  "source",
+  "monthly_bill",
+  "lead_status",
+  "follow_up_date",
+  "column_break_2",
+  "lead",
+  "customer",
+  "lost_reason",
+  "section_team",
+  "sales_person",
+  "surveyor",
+  "column_break_3",
+  "installer",
+  "visit_date",
+  "section_site",
+  "address",
+  "roof_type",
+  "shadow_free_area",
+  "phase",
+  "column_break_4",
+  "connected_load",
+  "kseb_consumer_no",
+  "kseb_section",
+  "section_system",
+  "system_kw",
+  "panel_brand",
+  "inverter_brand",
+  "price_per_kw",
+  "column_break_5",
+  "project_value",
+  "subsidy_amount",
+  "quotation",
+  "sales_order",
+  "section_loan",
+  "loan_required",
+  "loan_bank",
+  "column_break_6",
+  "loan_amount",
+  "loan_status",
+  "section_docs",
+  "documents",
+  "section_approvals",
+  "kseb_stage",
+  "kseb_stage_since",
+  "column_break_7",
+  "subsidy_stage",
+  "subsidy_stage_since",
+  "section_install",
+  "install_checks",
+  "section_commission",
+  "commission_date",
+  "first_generation",
+  "next_service_date",
+  "column_break_8",
+  "customer_signature",
+  "section_billing",
+  "advance_invoice",
+  "installation_invoice",
+  "final_invoice",
+  "section_log",
+  "stage_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SXP-.YYYY.-",
+   "default": "SXP-.YYYY.-",
+   "hidden": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "reqd": 1,
+   "options": "Phone",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "Lead\nSite Visit\nQuotation\nLoan\nPaper Work\nApprovals\nInstallation\nCommissioning\nAMC\nLost",
+   "default": "Lead",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "stage_since",
+   "fieldtype": "Datetime",
+   "label": "In Stage Since",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_lead",
+   "fieldtype": "Section Break",
+   "label": "Lead"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nWalk-in\nFacebook\nIndiaMART\nReferral\nWebsite\nOther"
+  },
+  {
+   "fieldname": "monthly_bill",
+   "fieldtype": "Currency",
+   "label": "Monthly KSEB Bill"
+  },
+  {
+   "fieldname": "lead_status",
+   "fieldtype": "Select",
+   "label": "Lead Status",
+   "options": "New\nContacted"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "ERPNext Lead",
+   "options": "Lead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lost_reason",
+   "fieldtype": "Small Text",
+   "label": "Lost Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_team",
+   "fieldtype": "Section Break",
+   "label": "Team"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person",
+   "options": "User"
+  },
+  {
+   "fieldname": "surveyor",
+   "fieldtype": "Link",
+   "label": "Surveyor",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installer",
+   "fieldtype": "Link",
+   "label": "Installer",
+   "options": "User"
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Site Visit Date"
+  },
+  {
+   "fieldname": "section_site",
+   "fieldtype": "Section Break",
+   "label": "Site Survey"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Site Address"
+  },
+  {
+   "fieldname": "roof_type",
+   "fieldtype": "Select",
+   "label": "Roof Type",
+   "options": "\nRCC\nTiled\nMetal sheet\nOther"
+  },
+  {
+   "fieldname": "shadow_free_area",
+   "fieldtype": "Float",
+   "label": "Shadow-free Area (sq ft)"
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Select",
+   "label": "Phase",
+   "options": "\nSingle phase\nThree phase"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connected_load",
+   "fieldtype": "Data",
+   "label": "Connected Load"
+  },
+  {
+   "fieldname": "kseb_consumer_no",
+   "fieldtype": "Data",
+   "label": "KSEB Consumer No"
+  },
+  {
+   "fieldname": "kseb_section",
+   "fieldtype": "Data",
+   "label": "KSEB Section Office"
+  },
+  {
+   "fieldname": "section_system",
+   "fieldtype": "Section Break",
+   "label": "System & Quotation"
+  },
+  {
+   "fieldname": "system_kw",
+   "fieldtype": "Float",
+   "label": "System Size (kW)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "panel_brand",
+   "fieldtype": "Data",
+   "label": "Panel Brand"
+  },
+  {
+   "fieldname": "inverter_brand",
+   "fieldtype": "Data",
+   "label": "Inverter Brand"
+  },
+  {
+   "fieldname": "price_per_kw",
+   "fieldtype": "Currency",
+   "label": "Price per kW"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_value",
+   "fieldtype": "Currency",
+   "label": "Project Value (before tax)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subsidy_amount",
+   "fieldtype": "Currency",
+   "label": "Estimated PM Surya Ghar Subsidy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "label": "Quotation",
+   "options": "Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_loan",
+   "fieldtype": "Section Break",
+   "label": "Loan",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "loan_required",
+   "fieldtype": "Check",
+   "label": "Loan Required"
+  },
+  {
+   "fieldname": "loan_bank",
+   "fieldtype": "Data",
+   "label": "Bank / Finance Provider"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loan_amount",
+   "fieldtype": "Currency",
+   "label": "Loan Amount"
+  },
+  {
+   "fieldname": "loan_status",
+   "fieldtype": "Select",
+   "label": "Loan Status",
+   "options": "\nApplied\nSanctioned\nDisbursed"
+  },
+  {
+   "fieldname": "section_docs",
+   "fieldtype": "Section Break",
+   "label": "Paper Work"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Customer Documents",
+   "options": "Solar Project Document"
+  },
+  {
+   "fieldname": "section_approvals",
+   "fieldtype": "Section Break",
+   "label": "KSEB & Subsidy"
+  },
+  {
+   "fieldname": "kseb_stage",
+   "fieldtype": "Select",
+   "label": "KSEB Net-Metering Stage",
+   "options": "Not Started\nApplication Submitted\nFeasibility Approved\nInspection\nMeter Installation\nSynchronised",
+   "default": "Not Started",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kseb_stage_since",
+   "fieldtype": "Datetime",
+   "label": "KSEB Stage Since",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subsidy_stage",
+   "fieldtype": "Select",
+   "label": "PM Surya Ghar Stage",
+   "options": "Not Started\nRegistered\nApplied\nInspection\nRedeemed",
+   "default": "Not Started",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subsidy_stage_since",
+   "fieldtype": "Datetime",
+   "label": "Subsidy Stage Since",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_install",
+   "fieldtype": "Section Break",
+   "label": "Installation"
+  },
+  {
+   "fieldname": "install_checks",
+   "fieldtype": "Table",
+   "label": "Installation Checklist",
+   "options": "Solar Project Check"
+  },
+  {
+   "fieldname": "section_commission",
+   "fieldtype": "Section Break",
+   "label": "Commissioning & AMC"
+  },
+  {
+   "fieldname": "commission_date",
+   "fieldtype": "Date",
+   "label": "Commission Date"
+  },
+  {
+   "fieldname": "first_generation",
+   "fieldtype": "Data",
+   "label": "First Generation Reading"
+  },
+  {
+   "fieldname": "next_service_date",
+   "fieldtype": "Date",
+   "label": "Next Service Date"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_signature",
+   "fieldtype": "Signature",
+   "label": "Customer Signature"
+  },
+  {
+   "fieldname": "section_billing",
+   "fieldtype": "Section Break",
+   "label": "Billing (ERPNext)"
+  },
+  {
+   "fieldname": "advance_invoice",
+   "fieldtype": "Link",
+   "label": "Advance Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "installation_invoice",
+   "fieldtype": "Link",
+   "label": "Installation Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_invoice",
+   "fieldtype": "Link",
+   "label": "Final Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_log",
+   "fieldtype": "Section Break",
+   "label": "Stage History",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "stage_log",
+   "fieldtype": "Table",
+   "label": "Stage Log",
+   "options": "Solar Stage Log",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-10-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Solar X",
+ "name": "Solar Project",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Sales",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Surveyor",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Installer",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Accounts",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "customer_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "customer_name,mobile_no,kseb_consumer_no"
+}

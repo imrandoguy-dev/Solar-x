@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-30 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_erp",
+  "company",
+  "solar_item",
+  "default_price_per_kw",
+  "column_break_a",
+  "customer_group",
+  "territory",
+  "taxes_template",
+  "mode_of_payment",
+  "section_split",
+  "advance_percent",
+  "installation_percent",
+  "final_percent",
+  "section_sla",
+  "sla_lead",
+  "sla_site_visit",
+  "sla_quotation",
+  "sla_loan",
+  "sla_paper_work",
+  "column_break_b",
+  "sla_approvals",
+  "sla_installation",
+  "sla_commissioning",
+  "section_kseb_sla",
+  "sla_kseb_application",
+  "sla_kseb_feasibility",
+  "sla_kseb_inspection",
+  "sla_kseb_meter",
+  "column_break_c",
+  "sla_sub_registered",
+  "sla_sub_applied",
+  "sla_sub_inspection"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_erp",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Defaults"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "solar_item",
+   "fieldtype": "Link",
+   "label": "Solar System Item",
+   "options": "Item",
+   "reqd": 1,
+   "description": "Non-stock service item billed per kW (UOM should allow decimals, e.g. kW)"
+  },
+  {
+   "fieldname": "default_price_per_kw",
+   "fieldtype": "Currency",
+   "label": "Default Price per kW",
+   "default": "60000"
+  },
+  {
+   "fieldname": "column_break_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "taxes_template",
+   "fieldtype": "Link",
+   "label": "Sales Taxes Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Default Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "section_split",
+   "fieldtype": "Section Break",
+   "label": "Payment Milestones (%)"
+  },
+  {
+   "fieldname": "advance_percent",
+   "fieldtype": "Percent",
+   "label": "Advance (on quote acceptance)",
+   "default": "30"
+  },
+  {
+   "fieldname": "installation_percent",
+   "fieldtype": "Percent",
+   "label": "After Installation",
+   "default": "60"
+  },
+  {
+   "fieldname": "final_percent",
+   "fieldtype": "Percent",
+   "label": "After Commissioning",
+   "default": "10"
+  },
+  {
+   "fieldname": "section_sla",
+   "fieldtype": "Section Break",
+   "label": "Stage SLA (days)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "sla_lead",
+   "fieldtype": "Int",
+   "label": "Lead",
+   "default": "2"
+  },
+  {
+   "fieldname": "sla_site_visit",
+   "fieldtype": "Int",
+   "label": "Site Visit",
+   "default": "3"
+  },
+  {
+   "fieldname": "sla_quotation",
+   "fieldtype": "Int",
+   "label": "Quotation",
+   "default": "7"
+  },
+  {
+   "fieldname": "sla_loan",
+   "fieldtype": "Int",
+   "label": "Loan",
+   "default": "10"
+  },
+  {
+   "fieldname": "sla_paper_work",
+   "fieldtype": "Int",
+   "label": "Paper Work",
+   "default": "5"
+  },
+  {
+   "fieldname": "column_break_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sla_approvals",
+   "fieldtype": "Int",
+   "label": "KSEB & Subsidy (overall)",
+   "default": "60"
+  },
+  {
+   "fieldname": "sla_installation",
+   "fieldtype": "Int",
+   "label": "Installation",
+   "default": "3"
+  },
+  {
+   "fieldname": "sla_commissioning",
+   "fieldtype": "Int",
+   "label": "Commissioning",
+   "default": "2"
+  },
+  {
+   "fieldname": "section_kseb_sla",
+   "fieldtype": "Section Break",
+   "label": "KSEB / Subsidy SLA (days)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "sla_kseb_application",
+   "fieldtype": "Int",
+   "label": "KSEB Application",
+   "default": "15"
+  },
+  {
+   "fieldname": "sla_kseb_feasibility",
+   "fieldtype": "Int",
+   "label": "KSEB Feasibility",
+   "default": "20"
+  },
+  {
+   "fieldname": "sla_kseb_inspection",
+   "fieldtype": "Int",
+   "label": "KSEB Inspection",
+   "default": "10"
+  },
+  {
+   "fieldname": "sla_kseb_meter",
+   "fieldtype": "Int",
+   "label": "KSEB Meter Installation",
+   "default": "15"
+  },
+  {
+   "fieldname": "column_break_c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sla_sub_registered",
+   "fieldtype": "Int",
+   "label": "Subsidy Registered",
+   "default": "3"
+  },
+  {
+   "fieldname": "sla_sub_applied",
+   "fieldtype": "Int",
+   "label": "Subsidy Applied",
+   "default": "7"
+  },
+  {
+   "fieldname": "sla_sub_inspection",
+   "fieldtype": "Int",
+   "label": "Subsidy Inspection",
+   "default": "15"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 0,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Solar X",
+ "name": "Solar X Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Solar Sales",
+   "read": 1
+  },
+  {
+   "role": "Solar Accounts",
+   "read": 1
+  },
+  {
+   "role": "Solar Surveyor",
+   "read": 1
+  },
+  {
+   "role": "Solar Installer",
+   "read": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

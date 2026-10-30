@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-30 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "from_stage",
+  "to_stage",
+  "direction",
+  "reason",
+  "user",
+  "on"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_stage",
+   "fieldtype": "Data",
+   "label": "From",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "to_stage",
+   "fieldtype": "Data",
+   "label": "To",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Forward\nBack",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "on",
+   "fieldtype": "Datetime",
+   "label": "On",
+   "in_list_view": 1,
+   "columns": 2
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-10-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Solar X",
+ "name": "Solar Stage Log",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "editable_grid": 1
+}
